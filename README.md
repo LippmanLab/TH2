@@ -30,11 +30,13 @@ Manually add tophat_out_\*/adjusted_junctions.bed to the jbrowse by doing the fo
 bin/flatfile-to-json.pl --bed data/data/raw/tomato*/ADJUSTED_JUNCTIONS.bedFILE --trackLabel 'uniqueNoSpaceString' --key 'string with possible spaces to display next to track in browser' --out data/data/json/tomato\*/ --trackType 'SashimiPlot/View/Track/Sashimi'
 ```
 
-3. manually add the metadata 'vi data/data/json/tomato*/trackList.json' to the trackList.json stanza. Should look something like the following.
+3. manually add the metadata using vi to the trackList.json stanza. Should look something like the following.
+
+```json
        "metadata" : {
          "Type" : "junction",
          "Pi" : "Lippman",
          "Experiment" : "the long description to display in trackSelector",
          "Trackid" : "trackXX"
        }
-
+```
