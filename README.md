@@ -25,7 +25,10 @@ Manually add tophat_out_\*/adjusted_junctions.bed to the jbrowse by doing the fo
 1. copy the tophat_out\*/adjusted_junctions.bed to /sonas-hs/lippman/nlsas/data/sollab_files/jbrowse/data/data/raw/tomato\*/
 2. convert to json with bin/flatfile-to-json.pl. This will be done on sollab from the JBrowse-1.12.1 directory.
 
-··* Example command: bin/flatfile-to-json.pl --bed data/data/raw/tomato*/ADJUSTED_JUNCTIONS.bedFILE --trackLabel 'uniqueNoSpaceString' --key 'string with possible spaces to display next to track in browser' --out data/data/json/tomato\*/ --trackType 'SashimiPlot/View/Track/Sashimi'
+```bash
+#Example command: 
+bin/flatfile-to-json.pl --bed data/data/raw/tomato*/ADJUSTED_JUNCTIONS.bedFILE --trackLabel 'uniqueNoSpaceString' --key 'string with possible spaces to display next to track in browser' --out data/data/json/tomato\*/ --trackType 'SashimiPlot/View/Track/Sashimi'
+```
 
 3. manually add the metadata 'vi data/data/json/tomato*/trackList.json' to the trackList.json stanza. Should look something like the following.
        "metadata" : {
