@@ -25,6 +25,6 @@ SampleNumber=(`wc -l $2 | cut -f1`)
 # Adjust log line and parallel line in the Proj_ParaTh2.sh script to have the appropriate
 # number of parallel processes (number of samples) and the appropriate logdir.
 echo "Making "$Proj"_ParaTh2.sh"
-awk -v SampleNumber="$SampleNumber" -v logdir="$logdir" -v ParameterFile="$PF" '{if($0 ~ /^SAMPLENUMBER LINE$/) {print "#$ -t 1-" SampleNumber} else if ($0 ~ /^LOGDIR LINE$/) {print "#$ -o " logdir} else if ($0 ~ /^PARAMETERFILE LINE$/) {print "Parameters=$(sed -n -e \"$SGE_TASK_ID p\" " ParameterFile ")"} else {print}}' Proj_ParaTh2_v3.sh > "$Proj"_ParaTh2.sh
+awk -v SampleNumber="$SampleNumber" -v logdir="$logdir" -v ParameterFile="$PF" '{if($0 ~ /^SAMPLENUMBER LINE$/) {print "#$ -t 1-" SampleNumber} else if ($0 ~ /^LOGDIR LINE$/) {print "#$ -o " logdir} else if ($0 ~ /^PARAMETERFILE LINE$/) {print "Parameters=$(sed -n -e \"$SGE_TASK_ID p\" " ParameterFile ")"} else {print}}' Proj_ParaTh2_v4.sh > "$Proj"_ParaTh2.sh
 chmod a+x "$Proj"_ParaTh2.sh
 
