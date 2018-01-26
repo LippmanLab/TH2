@@ -1,0 +1,2 @@
+SAMPLENAME_biorep(eg.sp5g_MVM1)	Read1name	Read2name	SeqPlatform(HiSeq|NextSeq|MiSeq|GAII)	GENOME(SL3.0)	CDS.FASTA(ITAG3.2_CDS.fasta)	ANNOTATION(ITAG3.2_gene_models.gff)	NUMBERMISMATCHES(2)	BASEDIR(/sonas-hs/lippman/hpc/data/clv_RNAseq/)	KEEPBAM(1|0)
+clv12_MVM3	299563_S8_R1_001.fastq.gz	299563_S8_R2_001.fastq.gz	NextSeq	SL3.0	ITAG3.2_CDS.fasta	ITAG3.2_gene_models.gff	2	/sonas-hs/lippman/hpc/data/clv_RNAseq/
