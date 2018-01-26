@@ -16,7 +16,7 @@ Before running the scripts:
 5) Ensure the appropriate bowtie2 indexes and annotation gff3 files have been made in $HOME/indexes
 6) This script file itself needs to be in working directory and submitted with qsub 
 
-### Secondary outputs
+### JBrowse outputs
 If adding the junctions.bed file to jbrowse for visualization of exon-exon junctions by sashimiplot plugin, need to adjust the start/stop positions by the "blockSizes" as the flatfile-to-json.pl script of JBrowse does not properly account for it. The following awk one liner has been incorporated into the *ParaTh2.sh script.
 
 awk 'BEGIN{FS="\t";OFS="\t"}FNR==1{print;next}{adjust=$11;split(adjust,adjustarr,",");printf("%s\t%s\t%s",$1, $2+adjustarr[1], $3-adjustarr[2]);for(i=4;i<=NF;i++){printf("\t%s",$i)};printf("\n")}' junctions.bed > adjusted_junctions.bed
